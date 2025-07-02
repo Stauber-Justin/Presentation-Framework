@@ -1,19 +1,48 @@
-# Presentation Framework
+# 🌌 NumboDeck – Modular Presentation Framework
 
-A lightweight modular web presentation system written in vanilla JavaScript. Slides are loaded at runtime from standalone HTML files listed in `config/slides.json`.
+NumboDeck is a *mysteriously brilliant* presentation framework written in vanilla JavaScript.
+Slides are dynamically loaded via JSON, animated through pluggable modules, and styled like a dream – from minimalist terminal talks to Studio Ghibli feels.
 
-## Quick Setup
+## 🚀 Quick Start
 
-1. Clone or copy the repository.
-2. Open `index.html` in any modern browser – no server required.
-3. Use the arrow keys or the on-screen arrows to navigate.
+1. Clone or download this repo
+2. Open `index.html` in any __modern browser__ (LiveServer recommended)
+3. Pick a module and hit [Start]
 
-## Extending
+## 🧩 How It Works
 
-* Add new slide HTML files under `pages/`.
-* Reference the slide path inside `config/slides.json`.
-* Use the hooks in the JS modules to integrate features like touch navigation or speaker notes.
+- `config/modules.json`: Lists all available slide modules
+- `config/<module>.json`: Lists HTML slides + optional landing slide
+- `pages/<module>/`: Contains individual HTML slide files
+- `styles/`: CSS themes per slide or per module
+- `logic/`: Modular JS system for loading, animation, and UI
 
-## License
+## 💡 Features
 
-Released under the [MIT License](LICENSE).
+✅ JSON-powered modules  
+✅ Slide-by-slide HTML injection  
+✅ Auto-style & script injection  
+✅ Arrow-key + UI navigation  
+✅ Progress bar (dynamic & clean)  
+✅ Codex-friendly structure  
+✅ GitHub Pages deployable
+
+## Themes
+
+Start with:
+- `theme-tech.css` – sleek for dev talks
+- `theme-cute.css` – cozy pastel presentation vibes
+
+Switch styles via `config/<module>.json` or per-slide `<link>` tags.
+
+## Plugins (W.I.P)
+
+Animation plugins go in `logic/`.  
+Activate via `config/modules.json` under `plugins`.
+
+```json
+{
+  "name": "sql_injection",
+  "title": "SQL 101",
+  "plugins": ["basic-anim.js"]
+}
