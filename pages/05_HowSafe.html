@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Numbo42">
+
+    <title>SQL Injection Präsentation – Schutz</title>
+    <link rel="stylesheet" href="../Styles/Theme.css" />
+    <link rel="stylesheet" href="../Styles/HowSafe.css" />
+    <link rel="stylesheet" href="../Styles/SQL_Highlight.css" />
+    <link rel="stylesheet" href="../Styles/NavStepper.css" />
+  </head>
+
+  <body>
+    <main>
+      <section class="slide" id="slide-5">
+        <h2 class="headline">Wie schützt man sich vor SQL-Injection?</h2>
+
+        <ul>
+          <li><span class="list-icon">✔️</span> Prepared Statements (empfohlen!)</li>
+          <li><span class="list-icon">✔️</span> Strikte Input-Validierung & Typprüfung</li>
+          <li><span class="list-icon">✔️</span> Prinzip der minimalen Rechte (Least Privilege)</li>
+          <li><span class="list-icon">✔️</span> Nutzung von Stored Procedures</li>
+        </ul>
+
+        <div class="highlight-box">
+          <h3>Was sind Stored Procedures?</h3>
+          <p>
+            Stored Procedures sind <strong>vordefinierte SQL-Befehle</strong>, die direkt in der Datenbank gespeichert werden.
+            Sie nehmen Parameter entgegen und <em>trennen Logik von Eingaben</em> – ganz ohne String-Konkatenation im Code!
+          </p>
+          <pre><code class="codeblock-sql">
+            CREATE PROCEDURE GetUserByName(@name NVARCHAR(50))
+            AS
+            BEGIN
+              SELECT * FROM users WHERE name = @name;
+            END
+            </code></pre>
+            
+          <p>
+            Vorteile: schwerer zu manipulieren, bessere Performance & Wartbarkeit.
+          </p>
+        </div>
+
+        <div class="quote-box">
+          <blockquote>
+            „SQL-Injection ist kein Bug – sie ist eine Einladung.“
+          </blockquote>
+        </div>
+      </section>
+    </main>
+    <script src="../Logic/SQL_Highlight.js"></script>
+
+    <!-- Slide Stepper Arrows -->
+    <script src="../Logic/NavStepper.js"></script>
+    <div id="nav-left" class="slide-nav" onclick="prevSlide()">&#10094;</div>
+    <div id="nav-right" class="slide-nav" onclick="nextSlide()">&#10095;</div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Numbo42">
+    
+    <title>SQL Injection Präsentation – Outro</title>
+    <link rel="stylesheet" href="../Styles/Theme.css" />
+    <link rel="stylesheet" href="../Styles/NavStepper.css" />
+
+    <style>
+      .presentation-outline {
+        list-style: none;
+        padding-left: 0;
+        text-align: left;
+        margin: 1.5rem auto;
+        max-width: 800px;
+      }
+      .presentation-outline li {
+        position: relative;
+        padding-left: 2em;
+        margin: 0.8em 0;
+        font-size: 1.2rem;
+      }
+      .presentation-outline li::before {
+        content: "✔️";
+        position: absolute;
+        left: 0;
+      }
+      .highlight-box {
+        background: rgba(0, 255, 136, 0.05);
+        border-left: 4px solid #00ff88;
+        padding: 1.2rem 1.5rem;
+        border-radius: 8px;
+        margin: 2rem auto;
+        max-width: 800px;
+        text-align: left;
+      }
+      .highlight-box h3 {
+        margin-top: 0;
+        color: #00ff88;
+      }
+      .cta-box {
+        margin-top: 2.5rem;
+        text-align: center;
+      }
+      .cta-box p {
+        font-size: 1.1rem;
+        margin: 0.6rem 0;
+      }
+      .emoji {
+        display: inline-block;
+        transform: rotate(10deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="slide" id="slide-6">
+        <h2 class="headline">Zusammenfassung & Ausblick</h2>
+
+        <img style="width: 600px;" src="https://th.bing.com/th/id/OIP.K4_VgdRM99JtDW0q1CGcvgHaD5?rs=1&pid=ImgDetMain">
+      </section>
+    </main>
+
+    <!-- Slide Stepper Arrows -->
+    <script src="../Logic/NavStepper.js"></script>
+    <div id="nav-left" class="slide-nav" onclick="prevSlide()">&#10094;</div>
+    <div id="nav-right" class="slide-nav" onclick="nextSlide()">&#10095;</div>
+  </body>
+</html>

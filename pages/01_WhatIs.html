@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Numbo42">
+    
+    <title>SQL Injection Präsentation</title>
+    <link rel="stylesheet" href="../Styles/Theme.css" />
+    <link rel="stylesheet" href="../Styles/NavStepper.css" />
+
+  </head>
+
+  <body>
+    <main>
+      <section class="slide" id="slide-1">
+        <h2 class="headline">Was ist eine SQL-Injection?</h2>
+      
+        <p class="intro-text">
+          Eine SQL-Injection ist ein Angriff, bei dem <strong>unerwarteter Code</strong> in eine Eingabe eingeschleust wird, die später direkt in einer Datenbank-Abfrage landet.
+        </p>
+      
+        <div class="example-box">
+          <h3>Beispiel</h3>
+          <p>Nutzer gibt ein:</p>
+          <pre>' OR 1=1 --</pre>
+          <p>und umgeht damit z. B. eine Login-Abfrage:</p>
+          <pre>SELECT * FROM users WHERE username = '<mark>' OR 1=1 --</mark>';</pre>
+        </div>
+      
+        <div class="visual-box">
+          <h3>Ablauf visualisiert:</h3>
+          <ul class="visual-list">
+            <li>Nutzer gibt manipulierten Text ins Formular ein</li>
+            <li>Formular sendet Eingabe <strong>ungeprüft</strong> an SQL-Query</li>
+            <li>SQL-Abfrage wird durchbrochen & manipuliert</li>
+            <li>Datenbank gibt alles frei oder führt Schaden aus</li>
+          </ul>
+        </div>
+      
+        <div class="quote-box">
+          <blockquote>
+            „Datenbanken sind ehrlich. Sie führen jeden Befehl aus – selbst wenn es dein Untergang ist.“
+          </blockquote>
+        </div>
+      </section>
+      
+    </main>
+      <!-- Slide Stepper Arrows -->
+  <script src="../Logic/NavStepper.js"></script>
+  <div id="nav-left" class="slide-nav" onclick="prevSlide()">&#10094;</div>
+  <div id="nav-right" class="slide-nav" onclick="nextSlide()">&#10095;</div>
+  </body>
+</html>

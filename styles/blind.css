@@ -1,0 +1,9 @@
+#blind-sql-preview {
+  background: #111;
+  color: #00ffaa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-family: 'Fira Code', monospace;
+  box-shadow: inset 0 0 10px rgba(0,255,136,0.1);
+}

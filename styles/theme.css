@@ -1,0 +1,170 @@
+/* ---------- Layout & Body ---------- */
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', monospace;
+  background-color: #0c0c0c;
+  color: #e0e0e0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Optional Google Fonts: Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+/* ---------- Slide Container ---------- */
+.slide {
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 70vw;
+  min-height: 80vh;
+  margin: 0 auto;
+  border-left: 4px solid #00ff88;
+  border-right: 4px solid #00ff88;
+  border-bottom: 4px solid #00ff88;
+  background: linear-gradient(to bottom, #121212, #0c0c0c);
+  box-shadow: 0 0 40px rgba(0, 255, 136, 0.05);
+  animation: fadeInSlide 1.2s ease-out;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Headings ---------- */
+.headline {
+  font-size: 2.8rem;
+  color: #00ff88;
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+}
+
+h2, h3 {
+  color: #00ffaa;
+  margin-top: 1rem;
+}
+
+/* ---------- Text ---------- */
+.intro-text,
+p, li {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+ul {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+ul li::marker {
+  color: #00ffaa;
+}
+
+/* ---------- Code & Boxes ---------- */
+pre, code {
+  background-color: #111;
+  color: #00ff88;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  text-align: left;
+  overflow-x: auto;
+  box-shadow: inset 0 0 10px rgba(0,255,136,0.2);
+}
+
+mark {
+  background-color: #00ffaa44;
+  color: #fff;
+  padding: 0 0.3em;
+  border-radius: 3px;
+}
+
+/* ---------- Presentation Boxes ---------- */
+.example-box,
+.visual-box,
+.quote-box,
+.presentation-outline {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #2affaa55;
+  border-left: 4px solid #00ff88;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 850px;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.08);
+}
+
+.result-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #2affaa66;
+  background-color: #111;
+  border-radius: 8px;
+  min-height: 2.5em;
+  transition: all 0.3s ease;
+}
+
+.result-box code {
+  background-color: #191919;
+  color: #00ffaa;
+  display: inline-block;
+  padding: 0.3em 0.6em;
+  margin-top: 0.3em;
+  border-radius: 4px;
+}
+
+
+/* ----------- Input --------------- */
+input {
+  background: #111;
+  color: #eee;
+  padding: 0.5em;
+  margin: 0.3em;
+  border: 1px solid #00ffaa55;
+  border-radius: 4px;
+  width: 250px;
+}
+
+button {
+  background: #00ffaa11;
+  color: #00ff88;
+  border: 1px solid #00ff88;
+  padding: 0.5em 1em;
+  margin-top: 0.5em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #00ffaa33;
+}
+
+
+
+/* ---------- Quote Style ---------- */
+.quote-box blockquote {
+  font-style: italic;
+  color: #cccccc;
+  border-left: 4px solid #00ffaa;
+  padding-left: 1em;
+}
+
+/* ---------- Footer / Disclaimer ---------- */
+.disclaimer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  font-style: italic;
+  text-align: center;
+}

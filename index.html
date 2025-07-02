@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Numbo42"> <!-- + ChattyChan -->
+
+  <title>SQL Injection Präsentation</title>
+  <link rel="stylesheet" href="/Styles/Theme.css" />
+  <link rel="stylesheet" href="/Styles/NavStepper.css" />
+
+</head>
+<body>
+  <main id="slide-container">
+    <section class="slide" id="slide-0">
+      <h2 class="headline">💉 SQL-Injection: Presentation 💉</h2>
+      <p class="intro-text">
+        Willkommen zu einer Live-Demo, bei der wir lernen, wie Angreifer über unsichere Formulare komplette Datenbanken übernehmen können – und wie man das verhindert.
+      </p>
+    
+      <div class="presentation-outline">
+        <h3>Ziele dieser Präsentation:</h3>
+        <ul>
+          <li>Was ist SQL-Injection – und wie funktioniert das?</li>
+          <li>Non-Blind vs. Blind SQL Injection live</li>
+          <li>Code-Analyse eines fehlerhaften JS-Logins</li>
+          <li>Prävention: Best Practices zur Absicherung</li>
+        </ul>
+      </div>
+    
+      <div class="disclaimer">
+        <small><strong>Hinweis:</strong> Diese Demo ist zu Lernzwecken gedacht. <br>Do not hack unless you have permission!</small>
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- Slide Stepper Arrows -->
+  <script src="Logic/NavStepper.js"></script>
+  <div id="nav-left" class="slide-nav" onclick="prevSlide()">&#10094;</div>
+  <div id="nav-right" class="slide-nav" onclick="nextSlide()">&#10095;</div>
+  
+
+</body>
+</html>

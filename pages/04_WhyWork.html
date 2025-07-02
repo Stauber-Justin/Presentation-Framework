@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Numbo42" />
+
+    <title>Warum funktioniert SQL Injection?</title>
+    <link rel="stylesheet" href="../Styles/Theme.css" />
+    <link rel="stylesheet" href="../Styles/NavStepper.css" />
+    <style>
+      .codebox {
+        background: #111;
+        color: #e0e0e0;
+        padding: 1em;
+        border-radius: 8px;
+        font-family: monospace;
+        white-space: pre-wrap;
+        margin-bottom: 1rem;
+      }
+      .code-comment {
+        color: #888;
+      }
+      .code-danger {
+        color: #ff8888;
+      }
+      .code-safe {
+        color: #88ff88;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="slide" id="slide-4">
+        <h2 class="headline">Warum funktioniert das überhaupt?</h2>
+
+        <p class="intro-text">
+          SQL-Injection entsteht, wenn Eingaben ungefiltert in SQL-Befehle eingebaut werden.
+          Der Code denkt, die Eingabe ist ein Wert – aber sie ist in Wahrheit ein <strong>SQL-Befehl</strong>!
+        </p>
+
+        <div class="codebox">
+          <span class="code-comment">// ❌ Unsicheres Beispiel (gefährlich!)</span><br>
+          const query = <span class="code-danger">"SELECT * FROM users WHERE name = $input"</span>;
+        </div>
+
+        <div class="codebox">
+          <span class="code-comment">// Sicher mit Prepared Statement (parametrisiert)</span><br>
+          const query = <span class="code-safe">"SELECT * FROM users WHERE name = ?"</span>;<br>
+          db.execute(query, [input]);
+        </div>
+
+        <div class="quote-box">
+          <blockquote>
+            „Daten und Code sollten nie in einem String verheiratet werden.“
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <!-- Slide Stepper Arrows -->
+    <script src="../Logic/NavStepper.js"></script>
+    <div id="nav-left" class="slide-nav" onclick="prevSlide()">&#10094;</div>
+    <div id="nav-right" class="slide-nav" onclick="nextSlide()">&#10095;</div>
+  </body>
+</html>

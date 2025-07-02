@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Numbo42">
+    
+    <title>SQL Injection Präsentation</title>
+    <link rel="stylesheet" href="../Styles/Theme.css" />
+    <link rel="stylesheet" href="../Styles/Blind.css" />
+    <link rel="stylesheet" href="../Styles/SQL_Highlight.css" />
+    <link rel="stylesheet" href="../Styles/NavStepper.css" />
+  </head>
+
+  <body>
+    <main>
+      <section class="slide" id="slide-2">
+        <h2 class="headline">Demo: Blind SQL-Injection</h2>
+      
+        <p class="intro-text">
+          Eine <strong>Blind SQL-Injection</strong> liegt vor, wenn die Webanwendung zwar auf manipulierte Eingaben reagiert, aber <em>keine direkten Hinweise</em> in der Ausgabe zeigt – z. B. keine Fehlermeldungen oder sichtbare Datenbankantworten.
+        </p>
+      
+        <div class="example-box">
+          <input type="text" id="username" placeholder="Benutzername" />
+          <input type="text" id="password" placeholder="Passwort" />
+          <button onclick="fakeBlind()">Login</button>
+          <div class="result-box">
+            <div id="login-result"></div>
+          </div>
+        </div>
+      
+        <div class="visual-box">
+          <h3>Was passiert technisch?</h3>
+          <ul>
+            <li>Die Eingabe wird in eine <strong>SQL-Abfrage</strong> eingebaut – ohne ausreichende Validierung.</li>
+            <li>Bei Blind Injection ist das Verhalten der App der einzige Hinweis – <em>z. B. durch Zeitverzögerung oder Login-Erfolg</em>.</li>
+            <li><strong>Beispiel 1:</strong> <code>' OR 1=1 --</code> → Logik wird immer wahr → Login erfolgreich</li>
+            <li><strong>Beispiel 2:</strong> <code>' AND 1=2 --</code> → Logik wird immer falsch → Login abgelehnt</li>
+          </ul>
+        </div>
+      
+        <div class="context-box">
+          <h3 style="text-align: left; margin-bottom: 5px; margin-left: 95px;">Angriffe nicht effizient weil:</h3>
+          <ul style="margin-top: 5px; margin-left: 95px;">
+            <li>Struktur der Datenbank kann nur <em>indirekt</em> erraten werden<br /><div style="margin-left: 20px;">(z. B. über "Ja/Nein"-Fragen)</div></li>
+            <li>Mit Zeitverzögerung prüfen:
+              <br><code style="margin-left: 20px; padding-top: 10px; padding-bottom: 10px;">' OR IF(1=1, SLEEP(3), 0) --</code> → Seite lädt auffällig lange</li>
+          </ul>
+        </div>
+      
+        <div class="quote-box">
+          <blockquote>
+            „Blind SQL-Injection ist wie ein Gespräch mit jemandem, der nur mit Nicken oder Schweigen antwortet –<br>
+            aber jedes Nicken verrät ein Stück Wahrheit.“
+          </blockquote>
+        </div>
+      </section>
+      
+    </main>
+    <script src="../Logic/Blind.js"></script>
+    
+    <!-- Slide Stepper Arrows -->
+    <script src="../Logic/NavStepper.js"></script>
+    <div id="nav-left" class="slide-nav" onclick="prevSlide()">&#10094;</div>
+    <div id="nav-right" class="slide-nav" onclick="nextSlide()">&#10095;</div>
+  </body>
+</html>

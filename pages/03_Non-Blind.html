@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Numbo42">
+  <title>SQL Injection Präsentation</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../Styles/Theme.css" />
+  <link rel="stylesheet" href="../Styles/Blind.css" />
+  <link rel="stylesheet" href="../Styles/SQL_Highlight.css" />
+  <link rel="stylesheet" href="../Styles/NavStepper.css" />
+</head>
+
+<body>
+  <main>
+    <section class="slide" id="slide-3">
+      <h2 class="headline">Demo: Non-Blind Injection</h2>
+
+      <p class="intro-text">
+        Diese Login-Maske ist absichtlich unsicher programmiert um eine <strong>Non-Blind SQL Injection</strong> zu testen.
+        <br>
+      </p>
+
+      <!-- Eingabe -->
+      <div class="example-box">
+        <h3>Loginformular</h3>
+        <input type="text" id="username" placeholder="Benutzername" />
+        <input type="text" id="password" placeholder="Passwort" />
+        <button onclick="fakeLogin()">Login</button>
+        <div id="login-result" class="result-box"></div>
+      </div>
+
+      <!-- SQL-Vorschau -->
+      <div class="visual-box">
+        <h3>Die (unsichere) SQL-Abfrage</h3>
+        <div id="sql-query" class="sql-preview-box"></div>
+      </div>
+
+      <div class="quote-box">
+        <blockquote>
+          „SQL ohne Parameter ist wie eine Burg ohne Mauern -<br /><div style="margin-left: 70px;">jeder kann einfach reinspazieren.“</div>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="../Logic/NavStepper.js"></script>
+  <script src="../Logic/NonBlind.js"></script>
+
+  <!-- Navigation -->
+  <div id="nav-left" class="slide-nav" onclick="prevSlide()">&#10094;</div>
+  <div id="nav-right" class="slide-nav" onclick="nextSlide()">&#10095;</div>
+</body>
+</html>
