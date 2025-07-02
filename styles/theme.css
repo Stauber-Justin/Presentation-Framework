@@ -168,3 +168,20 @@ button:hover {
   font-style: italic;
   text-align: center;
 }
+
+/* Hidden slides used by slider.js */
+.slide.hidden {
+  display: none;
+}
+
+/* Simple progress bar at the bottom */
+#progress-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background: #00ff88;
+  width: 0;
+  z-index: 2000;
+  transition: width 0.3s ease;
+}
