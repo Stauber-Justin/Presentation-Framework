@@ -8,6 +8,8 @@ import { initUI } from './ui.js';
 
 // Wait for the DOM to be ready before starting the app
 export async function startPresentation(module) {
+  const container = document.querySelector('#slide-container');
+  if (container) container.innerHTML = '';
   const assets = await loadSlides(`config/${module}.json`, '#slide-container');
   injectAssets(assets);
   initSlider('#slide-container');
