@@ -1,16 +1,14 @@
 # NumboDeck – Modular Presentation Framework
-[Live Demo → slides.chattylabs.dev](https://slides.chattylabs.dev)
-
 [![Live](https://img.shields.io/badge/🌐_Live-slides.chattylabs.dev-00ff88?style=flat-square)](https://slides.chattylabs.dev)
 
-NumboDeck is a *mysteriously brilliant* presentation framework written in vanilla JavaScript.<br />
-Slides are dynamically loaded via JSON, animated through pluggable modules, and styled like a dream – from minimalist terminal talks to Studio Ghibli feels.
+NumboDeck is a *mysteriously brilliant* presentation framework written in vanilla **JavaScript**.<br />
+Slides are dynamically loaded via **JSON**, animated through pluggable modules, and styled like a dream – from minimalist terminal talks to Studio Ghibli feels.
 
 ## 🚀 Quick Start
 
 1. Clone or download this repo
 2. Open `index.html` in any ~~modern browser~~ (LiveServer recommended)
-3. Pick a module and hit [Start]
+3. Pick a module and hit **[Start]**
 
 ## 🧩 How It Works
 
@@ -30,7 +28,7 @@ Slides are dynamically loaded via JSON, animated through pluggable modules, and 
 ✅ Codex-friendly structure  
 ✅ GitHub Pages deployable
 
-## Themes
+## 💫 Themes
 
 Start with:
 - `theme-tech.css` – sleek for dev talks
@@ -38,7 +36,7 @@ Start with:
 
 Switch styles via `config/<module>.json` or per-slide `<link>` tags.
 
-## Plugins (W.I.P)
+## 🔌 Plugins (W.I.P)
 
 Animation plugins go in `logic/`.  
 Activate via `config/modules.json` under `plugins`.
