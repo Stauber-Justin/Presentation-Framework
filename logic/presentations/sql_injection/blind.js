@@ -74,8 +74,11 @@ function fakeBlind() {
   }, 1000);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initBlind() {
   const inputs = document.querySelectorAll('#username, #password');
   inputs.forEach(input => input.addEventListener('input', updateBlindPreview));
   updateBlindPreview();
-});
+}
+
+if (document.readyState !== 'loading') initBlind();
+else document.addEventListener('DOMContentLoaded', initBlind);

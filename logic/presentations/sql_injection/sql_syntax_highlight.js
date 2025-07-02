@@ -6,7 +6,7 @@ function escapeHTML(str) {
     .replace(/>/g, "&gt;");
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initSyntaxHighlight() {
   const KEYWORDS = ['CREATE','PROCEDURE','AS','BEGIN','END','SELECT','FROM','WHERE','AND','OR','NVARCHAR(50)'];
 
   document.querySelectorAll('code.codeblock-sql').forEach(codeEl => {
@@ -53,4 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 8) Ergebnis rendern
     codeEl.innerHTML = txt;
   });
-});
+}
+
+if (document.readyState !== 'loading') initSyntaxHighlight();
+else document.addEventListener('DOMContentLoaded', initSyntaxHighlight);

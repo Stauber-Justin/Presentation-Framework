@@ -3,43 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Numbo42"> <!-- + ChattyChan -->
-
-  <title>SQL Injection Präsentation</title>
-  <link rel="stylesheet" href="/styles/theme_templates/theme.css" />
-  <link rel="stylesheet" href="/styles/nav_stepper.css" />
-
+  <title>Presentation Framework</title>
+  <link rel="stylesheet" href="styles/landing_page.css" />
+  <link rel="stylesheet" href="styles/nav_stepper.css" />
 </head>
 <body>
-  <main id="slide-container">
-    <section class="slide" id="slide-0">
-      <h2 class="headline">💉 SQL-Injection: Presentation 💉</h2>
-      <p class="intro-text">
-        Willkommen zu einer Live-Demo, bei der wir lernen, wie Angreifer über unsichere Formulare komplette Datenbanken übernehmen können – und wie man das verhindert.
-      </p>
-    
-      <div class="presentation-outline">
-        <h3>Ziele dieser Präsentation:</h3>
-        <ul>
-          <li>Was ist SQL-Injection – und wie funktioniert das?</li>
-          <li>Non-Blind vs. Blind SQL Injection live</li>
-          <li>Code-Analyse eines fehlerhaften JS-Logins</li>
-          <li>Prävention: Best Practices zur Absicherung</li>
-        </ul>
-      </div>
-    
-      <div class="disclaimer">
-        <small><strong>Hinweis:</strong> Diese Demo ist zu Lernzwecken gedacht. <br>Do not hack unless you have permission!</small>
-      </div>
-    </section>
-    
-  </main>
+  <div id="landing">
+    <h1>Presentation Framework</h1>
+    <div class="selector">
+      <select id="module-select"></select>
+      <button id="start-btn">Start</button>
+    </div>
+  </div>
 
-  <!-- Slide Navigation Arrows -->
-  <div id="nav-left" class="slide-nav">&#10094;</div>
-  <div id="nav-right" class="slide-nav">&#10095;</div>
-  <script type="module" src="logic/core.js"></script>
-  
+  <main id="slide-container" class="hidden"></main>
+  <div id="nav-left" class="slide-nav hidden">&#10094;</div>
+  <div id="nav-right" class="slide-nav hidden">&#10095;</div>
 
+  <script type="module">
+    import { startPresentation } from './logic/core.js';
+
+    async function initModules() {
+      const res = await fetch('config/modules.json');
+      const data = await res.json();
+      const select = document.getElementById('module-select');
+      data.modules.forEach(m => {
+        const opt = document.createElement('option');
+        opt.value = m.name;
+        opt.textContent = m.title;
+        select.appendChild(opt);
+      });
+    }
+
+    document.getElementById('start-btn').addEventListener('click', () => {
+      const mod = document.getElementById('module-select').value;
+      document.getElementById('landing').classList.add('hidden');
+      document.getElementById('slide-container').classList.remove('hidden');
+      document.querySelectorAll('.slide-nav').forEach(n => n.classList.remove('hidden'));
+      startPresentation(mod);
+    });
+
+    initModules();
+  </script>
 </body>
 </html>

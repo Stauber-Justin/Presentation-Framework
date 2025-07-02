@@ -114,9 +114,12 @@ function fakeLogin() {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
+function initNonBlind() {
   document.querySelectorAll('#username, #password').forEach(input =>
     input.addEventListener('input', updateNonBlindPreview)
   );
   updateNonBlindPreview();
-});
+}
+
+if (document.readyState !== 'loading') initNonBlind();
+else document.addEventListener('DOMContentLoaded', initNonBlind);
