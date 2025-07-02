@@ -1,4 +1,5 @@
 {
+  "landing": "pages/sql_injection/index.html",
   "slides": [
     "pages/sql_injection/01_WhatIs.html",
     "pages/sql_injection/02_Blind.html",

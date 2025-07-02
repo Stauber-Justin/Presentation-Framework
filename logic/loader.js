@@ -20,11 +20,24 @@ export async function loadSlides(configPath, targetSelector) {
     const res = await fetch(configPath);
     const data = await res.json();
     const slides = data.slides || [];
+    const landing = data.landing;
+
+    let index = 0;
+    if (landing) {
+      const { section, scripts, styles } = await fetchSlide(landing);
+      if (section) {
+        if (!section.id) section.id = `slide-${index}`;
+        container.appendChild(section);
+        index++;
+      }
+      assets.scripts.push(...scripts);
+      assets.styles.push(...styles);
+    }
 
     for (let i = 0; i < slides.length; i++) {
       const { section, scripts, styles } = await fetchSlide(slides[i]);
       if (section) {
-        if (!section.id) section.id = `slide-${i + 1}`;
+        if (!section.id) section.id = `slide-${i + index}`;
         container.appendChild(section);
       }
       assets.scripts.push(...scripts);
