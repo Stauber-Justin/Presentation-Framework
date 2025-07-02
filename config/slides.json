@@ -1,10 +1,10 @@
 {
   "slides": [
-    "pages/01_WhatIs.html",
-    "pages/02_Blind.html",
-    "pages/03_Non-Blind.html",
-    "pages/04_WhyWork.html",
-    "pages/05_HowSafe.html",
-    "pages/06_Outro.html"
+    "pages/sql_injection/01_WhatIs.html",
+    "pages/sql_injection/02_Blind.html",
+    "pages/sql_injection/03_Non-Blind.html",
+    "pages/sql_injection/04_WhyWork.html",
+    "pages/sql_injection/05_HowSafe.html",
+    "pages/sql_injection/06_Outro.html"
   ]
 }
