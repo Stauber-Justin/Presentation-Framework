@@ -1,0 +1,7 @@
+{
+  "name": "Presentation Framework",
+  "description": "Modular browser-based Web Presentation Framework with dynamic HTML slide loading, script/style injection, and full JS separation. Built for reuse.",
+  "entry": "index.html",
+  "modules": ["logic/core.js", "logic/loader.js", "logic/slider.js", "logic/ui.js", "logic/asset_loader.js"],
+  "tags": ["frontend", "presentation", "html-loader", "no-backend", "modular-js"]
+}
