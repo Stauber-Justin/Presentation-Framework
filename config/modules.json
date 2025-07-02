@@ -1,0 +1,5 @@
+{
+  "modules": [
+    { "name": "sql_injection", "title": "SQL Injection Demo" }
+  ]
+}

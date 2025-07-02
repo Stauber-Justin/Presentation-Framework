@@ -11,8 +11,10 @@ export async function loadSlides(configPath, targetSelector) {
   const container = document.querySelector(targetSelector);
   if (!container) {
     console.warn(`Target container '${targetSelector}' not found.`);
-    return;
+    return { scripts: [], styles: [] };
   }
+
+  const assets = { scripts: [], styles: [] };
 
   try {
     const res = await fetch(configPath);
@@ -20,16 +22,46 @@ export async function loadSlides(configPath, targetSelector) {
     const slides = data.slides || [];
 
     for (let i = 0; i < slides.length; i++) {
-      const html = await fetch(slides[i]).then(r => r.text());
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      let section = doc.querySelector('section.slide');
-      if (!section) section = doc.body.firstElementChild;
-      if (!section) continue;
-      if (!section.id) section.id = `slide-${i + 1}`;
-      container.appendChild(section);
+      const { section, scripts, styles } = await fetchSlide(slides[i]);
+      if (section) {
+        if (!section.id) section.id = `slide-${i + 1}`;
+        container.appendChild(section);
+      }
+      assets.scripts.push(...scripts);
+      assets.styles.push(...styles);
     }
   } catch (err) {
     console.error('Failed to load slides:', err);
   }
+
+  return assets;
+}
+
+function resolvePath(base, relative) {
+  const stack = base.split('/');
+  stack.pop();
+  for (const part of relative.split('/')) {
+    if (part === '..') stack.pop();
+    else if (part !== '.') stack.push(part);
+  }
+  return stack.join('/');
+}
+
+async function fetchSlide(path) {
+  const html = await fetch(path).then(r => r.text());
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+
+  const section = doc.querySelector('section.slide') || doc.body.firstElementChild;
+
+  const scripts = Array.from(doc.querySelectorAll('script')).map(s => {
+    return s.src
+      ? { src: resolvePath(path, s.getAttribute('src')) }
+      : { content: s.textContent };
+  });
+
+  const styles = Array.from(doc.querySelectorAll('link[rel="stylesheet"]'))
+    .map(l => resolvePath(path, l.getAttribute('href')));
+
+  return { section, scripts, styles };
 }
