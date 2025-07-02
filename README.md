@@ -1,12 +1,15 @@
-# 🌌 NumboDeck – Modular Presentation Framework
+# NumboDeck – Modular Presentation Framework
+[Live Demo → slides.chattylabs.dev](https://slides.chattylabs.dev)
 
-NumboDeck is a *mysteriously brilliant* presentation framework written in vanilla JavaScript.
+[![Live](https://img.shields.io/badge/🌐_Live-slides.chattylabs.dev-00ff88?style=flat-square)](https://slides.chattylabs.dev)
+
+NumboDeck is a *mysteriously brilliant* presentation framework written in vanilla JavaScript.<br />
 Slides are dynamically loaded via JSON, animated through pluggable modules, and styled like a dream – from minimalist terminal talks to Studio Ghibli feels.
 
 ## 🚀 Quick Start
 
 1. Clone or download this repo
-2. Open `index.html` in any __modern browser__ (LiveServer recommended)
+2. Open `index.html` in any ~~modern browser~~ (LiveServer recommended)
 3. Pick a module and hit [Start]
 
 ## 🧩 How It Works
