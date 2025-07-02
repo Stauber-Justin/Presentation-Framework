@@ -1,18 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
 /* ---------- Layout & Body ---------- */
 body {
   min-height: 100vh;
   min-width: 100vw;
   margin: 0;
   padding: 0;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   background-color: #0c0c0c;
   color: #e0e0e0;
   line-height: 1.6;
   overflow-x: hidden;
 }
-
-/* Optional Google Fonts: Fira Code */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 /* ---------- Slide Container ---------- */
 .slide {
@@ -21,19 +20,20 @@ body {
   max-width: 70vw;
   min-height: 80vh;
   margin: 0 auto;
-  border-left: 4px solid #00ff88;
-  border-right: 4px solid #00ff88;
-  border-bottom: 4px solid #00ff88;
+  border-left: 4px solid #0f8;
+  border-right: 4px solid #0f8;
+  border-bottom: 4px solid #0f8;
   background: linear-gradient(to bottom, #121212, #0c0c0c);
-  box-shadow: 0 0 40px rgba(0, 255, 136, 0.05);
+  box-shadow: 0 0 40px rgba(0 255 136 / 5%);
   animation: fadeInSlide 1.2s ease-out;
 }
 
-@keyframes fadeInSlide {
+@keyframes fade-in-slide {
   from {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -43,12 +43,12 @@ body {
 /* ---------- Headings ---------- */
 .headline {
   font-size: 2.8rem;
-  color: #00ff88;
-  text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+  color: #0f8;
+  text-shadow: 0 0 5px rgba(0 255 136 / 30%);
 }
 
 h2, h3 {
-  color: #00ffaa;
+  color: #0fa;
   margin-top: 1rem;
 }
 
@@ -65,24 +65,24 @@ ul {
 }
 
 ul li::marker {
-  color: #00ffaa;
+  color: #0fa;
 }
 
 /* ---------- Code & Boxes ---------- */
 pre, code {
   background-color: #111;
-  color: #00ff88;
+  color: #0f8;
   padding: 0.8rem 1.2rem;
   font-size: 1rem;
   border-radius: 6px;
   margin: 1rem 0;
   text-align: left;
   overflow-x: auto;
-  box-shadow: inset 0 0 10px rgba(0,255,136,0.2);
+  box-shadow: inset 0 0 10px rgba(0 255 136 / 20%);
 }
 
 mark {
-  background-color: #00ffaa44;
+  background-color: #0fa4;
   color: #fff;
   padding: 0 0.3em;
   border-radius: 3px;
@@ -93,15 +93,15 @@ mark {
 .visual-box,
 .quote-box,
 .presentation-outline {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255 255 255 / 3%);
   border: 1px solid #2affaa55;
-  border-left: 4px solid #00ff88;
+  border-left: 4px solid #0f8;
   border-radius: 12px;
   padding: 1.5rem;
   margin: 2rem auto;
   max-width: 850px;
   text-align: left;
-  box-shadow: 0 0 20px rgba(0, 255, 136, 0.08);
+  box-shadow: 0 0 20px rgba(0 255 136 / 8%);
 }
 
 .result-box {
@@ -116,13 +116,12 @@ mark {
 
 .result-box code {
   background-color: #191919;
-  color: #00ffaa;
+  color: #0fa;
   display: inline-block;
   padding: 0.3em 0.6em;
   margin-top: 0.3em;
   border-radius: 4px;
 }
-
 
 /* ----------- Input --------------- */
 input {
@@ -130,15 +129,15 @@ input {
   color: #eee;
   padding: 0.5em;
   margin: 0.3em;
-  border: 1px solid #00ffaa55;
+  border: 1px solid #0fa5;
   border-radius: 4px;
   width: 250px;
 }
 
 button {
-  background: #00ffaa11;
-  color: #00ff88;
-  border: 1px solid #00ff88;
+  background: #0fa1;
+  color: #0f8;
+  border: 1px solid #0f8;
   padding: 0.5em 1em;
   margin-top: 0.5em;
   cursor: pointer;
@@ -147,16 +146,14 @@ button {
 }
 
 button:hover {
-  background: #00ffaa33;
+  background: #0fa3;
 }
-
-
 
 /* ---------- Quote Style ---------- */
 .quote-box blockquote {
   font-style: italic;
-  color: #cccccc;
-  border-left: 4px solid #00ffaa;
+  color: #ccc;
+  border-left: 4px solid #0fa;
   padding-left: 1em;
 }
 
@@ -164,7 +161,7 @@ button:hover {
 .disclaimer {
   margin-top: 2rem;
   font-size: 0.9rem;
-  color: #aaaaaa;
+  color: #aaa;
   font-style: italic;
   text-align: center;
 }
@@ -180,7 +177,7 @@ button:hover {
   left: 0;
   bottom: 0;
   height: 4px;
-  background: #00ff88;
+  background: #0f8;
   width: 0;
   z-index: 2000;
   transition: width 0.3s ease;

@@ -1,24 +1,26 @@
 .sql-preview-box {
   background-color: #111;
   border-radius: 10px;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   color: #eee;
   text-align: center;
   align-items: center;
   margin-top: 5px;
   padding-top: 17px;
   word-break: break-word;
-  box-shadow: inset 0 0 15px rgba(0, 255, 136, 0.15);
-  border: 1px solid #00ffaa55;
+  box-shadow: inset 0 0 15px rgba(0 255 136 / 15%);
+  border: 1px solid #0fa5;
 }
 
 .sql-keyword {
   color: #00b7ff;
   font-weight: bold;
 }
+
 .sql-string {
   color: #ee6b90;
 }
+
 .sql-symbol {
   color: #ef8e19;
 }
