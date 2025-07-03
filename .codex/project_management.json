@@ -1,0 +1,17 @@
+{
+  "module": "project_management",
+  "description": "Slides about a hybrid approach to project management mixing waterfall and agile.",
+  "config": "config/project_management.json",
+  "slides": [
+    {"file": "pages/project_management/index.html", "title": "Landing"},
+    {"file": "pages/project_management/01_\u00fcbersicht.html", "title": "Inhaltsverzeichnis"},
+    {"file": "pages/project_management/02_klassische_probleme.html", "title": "Ausgangssituation & Herausforderungen"},
+    {"file": "pages/project_management/03_top_level_planning.html", "title": "Top-Level-Planung: Wasserfallmodell"},
+    {"file": "pages/project_management/04_architektur_struktur.html", "title": "Systemarchitektur & Modulstruktur"},
+    {"file": "pages/project_management/05_kriterien_matrix.html", "title": "Methodenauswahl pro Modul"},
+    {"file": "pages/project_management/06_real_world_scenario.html", "title": "Praxisbeispiel: C++11 \u2192 C++17 Migration"},
+    {"file": "pages/project_management/07_tools_integration.html", "title": "Tools, Metriken & Governance"},
+    {"file": "pages/project_management/08_fazit.html", "title": "Fazit & Ausblick: Hybrid-PM"},
+    {"file": "pages/project_management/09_appendix.html", "title": "Anlagen / Appendix"}
+  ]
+}
