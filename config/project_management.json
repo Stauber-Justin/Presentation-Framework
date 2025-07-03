@@ -1,0 +1,12 @@
+{
+  "landing": "pages/project_management/index.html",
+  "slides": [
+    "pages/project_management/01_lastenheft.html",
+    "pages/project_management/02_pflichtenheft.html",
+    "pages/project_management/03_anforderungen.html",
+    "pages/project_management/04_wasserfallmodell.html",
+    "pages/project_management/05_strukturdiagramm.html",
+    "pages/project_management/06_roadmap.html",
+    "pages/project_management/07_fazit.html"
+  ]
+}
