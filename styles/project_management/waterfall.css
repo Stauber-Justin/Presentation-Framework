@@ -1,0 +1,25 @@
+.waterfall-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.waterfall-visual img {
+  width: 120px;
+  height: auto;
+}
+
+.waterfall-visual ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.05rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.waterfall-visual ul li::before {
+  content: "→ ";
+  color: var(--accent-color);
+}

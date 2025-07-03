@@ -89,6 +89,25 @@ ol {
   font-size: 1.1rem;
 }
 
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  justify-items: center;
+  align-items: center;
+}
+.icon-item img {
+  width: 64px;
+  height: 64px;
+}
+.icon-item p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--accent-light);
+  text-align: center;
+}
+
 .presenter, .date {
   font-size: 1rem;
   text-align: center;

@@ -3,12 +3,16 @@
   "slides": [
     "pages/project_management/01_übersicht.html",
     "pages/project_management/02_klassische_probleme.html",
-    "pages/project_management/03_top_level_planning.html",
-    "pages/project_management/04_architektur_struktur.html",
-    "pages/project_management/05_kriterien_matrix.html",
-    "pages/project_management/06_real_world_scenario.html",
-    "pages/project_management/07_tools_integration.html",
-    "pages/project_management/08_fazit.html",
-    "pages/project_management/09_appendix.html"
+    "pages/project_management/04_top_level_planning.html",
+    "pages/project_management/05_visual_example.html",
+    "pages/project_management/06_architektur_struktur.html",
+    "pages/project_management/07_visual_example.html",
+    "pages/project_management/08_kriterien_matrix.html",
+    "pages/project_management/09_visual_example.html",
+    "pages/project_management/10_real_world_scenario.html",
+    "pages/project_management/11_visual_example.html",
+    "pages/project_management/12_tools_integration.html",
+    "pages/project_management/13_fazit.html",
+    "pages/project_management/14_appendix.html"
   ]
 }
