@@ -1,12 +1,14 @@
 {
   "landing": "pages/project_management/index.html",
   "slides": [
-    "pages/project_management/01_lastenheft.html",
-    "pages/project_management/02_pflichtenheft.html",
-    "pages/project_management/03_anforderungen.html",
-    "pages/project_management/04_wasserfallmodell.html",
-    "pages/project_management/05_strukturdiagramm.html",
-    "pages/project_management/06_roadmap.html",
-    "pages/project_management/07_fazit.html"
+    "pages/project_management/01_übersicht.html",
+    "pages/project_management/02_klassische_probleme.html",
+    "pages/project_management/03_top_level_planning.html",
+    "pages/project_management/04_architektur_struktur.html",
+    "pages/project_management/05_kriterien_matrix.html",
+    "pages/project_management/06_real_world_scenario.html",
+    "pages/project_management/07_tools_integration.html",
+    "pages/project_management/08_fazit.html",
+    "pages/project_management/09_appendix.html"
   ]
 }
