@@ -1,5 +1,6 @@
 {
   "modules": [
-    { "name": "sql_injection", "title": "SQL Injection Demo" }
+    { "name": "sql_injection", "title": "SQL Injection Demo" },
+    { "name": "project_management", "title": "CMS Projekt" }
   ]
 }

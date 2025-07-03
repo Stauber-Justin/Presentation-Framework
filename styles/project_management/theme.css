@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Fira Sans", Arial, sans-serif;
+  background: #fdfdfd;
+  color: #222;
+}
+
+.slide {
+  padding: 3rem 2rem;
+  max-width: 70vw;
+  min-height: 80vh;
+  margin: 0 auto;
+  background: #fff;
+  border: 2px solid #00aaff;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 170, 255, 0.1);
+  animation: fadeInSlide 0.5s ease-out;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in {
+  animation: fadeInSlide 0.5s ease-out;
+}
+
+.fade-out {
+  animation: fadeOutSlide 0.4s ease-in forwards;
+}
+
+@keyframes fadeOutSlide {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.slide.hidden {
+  display: none;
+}
+
+h1, h2, h3 {
+  color: #007acc;
+}
+
+ul {
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+ul li::marker {
+  color: #00aaff;
+}
+
+#progress-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background: #00aaff;
+  width: 0;
+  z-index: 2000;
+  transition: width 0.3s ease;
+}

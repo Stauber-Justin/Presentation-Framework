@@ -42,10 +42,23 @@ function handleKey(e) {
 }
 
 function showSlide(index) {
-  if (index < 0 || index >= slides.length) return;
-  slides[currentIndex].classList.add('hidden');
+  if (index < 0 || index >= slides.length || index === currentIndex) return;
+
+  const oldSlide = slides[currentIndex];
+  const newSlide = slides[index];
+
+  oldSlide.classList.add('fade-out');
+  setTimeout(() => {
+    oldSlide.classList.remove('fade-out');
+    oldSlide.classList.add('hidden');
+  }, 200);
+
+  newSlide.classList.remove('hidden');
+  newSlide.classList.add('fade-in');
+
   currentIndex = index;
-  slides[currentIndex].classList.remove('hidden');
   window.location.hash = `slide=${index}`;
-  listeners.forEach(fn => fn(index, slides.length)); // HOOK: slide changed
+  listeners.forEach(fn => fn(index, slides.length));
+
+  setTimeout(() => newSlide.classList.remove('fade-in'), 500);
 }
