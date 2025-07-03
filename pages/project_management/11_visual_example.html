@@ -5,14 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roadmap</title>
     <link rel="stylesheet" href="../../styles/project_management/theme.css" />
+    <link rel="stylesheet" href="../../styles/project_management/real_world.css" />
+
   </head>
   <body>
     <main>
       <!-- Visual Slide after Slide 6 -->
       <section class="slide" id="slide-11">
         <h2 class="slide-title">Visuelles Beispiel: Burndown-Chart</h2>
-        <!-- Empfohlen: Vorschau Burndown-Chart als statische Grafik -->
-        <img src="placeholder_burndown.png" alt="Burndown-Chart" class="example-image" />
+        
+        <div id="dir-pic-container">
+          <img src="../../assets/project_management/real_world_source.png" />
+          <img src="../../assets/project_management/real_world_code.png" />
+          <img src="../../assets/project_management/real_world_doc.png" />
+        </div>
+        <pre id="sql-query">
+SELECT SUM(table_rows)
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_SCHEMA IN ('legion_hotfixes', 'legion_world', 'legion_auth', 'legion_characters');
+/* Affected rows: 0  Found rows: <span class="highlight">1.360</span>  Warnings: 0  Duration for 5 queries: 5,875 sec. */
+        </pre>
       </section>
     </main>
   </body>

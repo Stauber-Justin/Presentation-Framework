@@ -1,0 +1,59 @@
+/* Slide 11 – Real World TrinityCore Visualization */
+
+#dir-pic-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: start;
+  margin: 2rem 0;
+}
+
+#dir-pic-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 255, 195, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#dir-pic-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 16px rgba(161, 121, 255, 0.5);
+}
+
+/* SQL query display – source awe moment */
+#sql-query {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.95rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid var(--accent-color);
+  font-family: 'Fira Code', monospace;
+  color: #aaffcc;
+  border-radius: 8px;
+  box-shadow: inset 0 0 6px rgba(0, 255, 195, 0.1);
+  margin: 2rem auto;
+}
+
+
+.highlight {
+  color: var(--mint);
+  background-color: rgba(0, 255, 195, 0.1);
+  font-weight: bold;
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  text-shadow: 0 0 5px rgba(0, 255, 195, 0.4);
+}
+
+#sql-query::before {
+  content: "Live Database:";
+  display: block;
+  font-size: 0.85rem;
+  color: var(--mint);
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
