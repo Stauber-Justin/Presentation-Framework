@@ -1,19 +1,22 @@
-<section class="slide">
-  <h1>Systemübersicht & Modulare Struktur</h1>
-  <p>Das Framework besteht aus folgenden Hauptmodulen:</p>
-  <ul>
-    <li><strong>core.js:</strong> Einstiegspunkt / Init</li>
-    <li><strong>loader.js:</strong> JSON-Slide-Importer</li>
-    <li><strong>slider.js:</strong> Navigation & Steuerung</li>
-    <li><strong>ui.js:</strong> Fortschritt / Events</li>
-    <li><strong>asset_loader.js:</strong> Script & CSS Injection</li>
-  </ul>
-  <pre>
-    core.js
-      │
-      ├─ loader.js ──▶ asset_loader.js
-      │
-      ├─ slider.js
-      │    └─ ui.js
-  </pre>
-</section>
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Systemstruktur</title>
+    <link rel="stylesheet" href="../../styles/project_management/theme.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Systemstruktur</h1>
+      <p>Das Framework besteht aus folgenden Modulen:</p>
+      <ul>
+        <li><strong>core.js:</strong> Einstiegspunkt</li>
+        <li><strong>loader.js:</strong> Slide-Import</li>
+        <li><strong>slider.js:</strong> Navigation</li>
+        <li><strong>ui.js:</strong> Fortschrittslogik</li>
+      </ul>
+      <!-- Hier kann später ein Diagramm als <img alt="Moduldiagramm" src="..."> eingebunden werden -->
+    </main>
+  </body>
+</html>
